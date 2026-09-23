@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BangkiyXSupermax - Sensi X VIP</title>
+    
+    <style>
+        /* Menggunakan font.ttf yang kamu upload */
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('font.ttf') format('truetype');
+        }
+
+        :root {
+            --bg: #0f1014;      
+            --text: #ffffff;
+            --card-bg: #1e1f26;
+            --accent-blue: #00e5ff;
+            --discount-red: #ff3e3e;
+            --free-gray: #7f8c8d;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'CustomFont', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .main-photo {
+            width: 65%; 
+            height: auto;
+            margin: 0 auto 25px auto;
+            display: block;
+        }
+
+        .desc-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            margin-bottom: 15px;
+            text-align: left;
+            padding: 0 15px;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            color: #bdc3c7;
+            margin-bottom: 35px;
+            padding: 0 15px;
+            text-align: justify;
+        }
+
+        /* --- FEATURE ITEMS --- */
+        .feature-item {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.05);
+            text-align: left;
+        }
+
+        .feature-img { 
+            width: 100%; 
+            border-radius: 10px; 
+            margin-bottom: 15px; 
+            border: 1px solid #333; 
+        }
+
+        .feature-item h3 { 
+            color: var(--accent-blue); 
+            margin-bottom: 10px; 
+            font-size: 1.2rem; 
+            font-weight: bold;
+        }
+
+        .feature-desc { font-size: 0.9rem; color: #ccc; text-align: justify; }
+
+        /* --- PRICING/COMPARISON TABLE --- */
+        .pricing-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 50px 0;
+            padding: 0 10px;
+        }
+
+        .price-card {
+            background: linear-gradient(145deg, #1e1f26, #14151a);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--accent-blue);
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+        }
+
+        .version-name { font-size: 1.6rem; font-weight: 800; color: var(--accent-blue); }
+        .version-name.free { color: var(--free-gray); }
+
+        .price-label { 
+            font-size: 1.8rem; 
+            font-weight: 800; 
+            color: #fff;
+            display: block;
+            margin: 15px 0;
+        }
+
+        .feature-list {
+            text-align: left;
+            font-size: 0.9rem;
+            list-style: none;
+            color: #bdc3c7;
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+
+        .feature-list li { margin-bottom: 10px; display: flex; align-items: center; }
+
+        .feature-list li.yes::before {
+            content: "✓";
+            color: var(--accent-blue);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .feature-list li.no::before {
+            content: "✕";
+            color: var(--discount-red);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* --- BUTTONS --- */
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 0 10px;
+            margin: 40px 0;
+        }
+
+        .btn {
+            padding: 18px 25px;
+            border-radius: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: white;
+            font-family: 'CustomFont', sans-serif;
+        }
+
+        .btn-blue { background: linear-gradient(45deg, #0088cc, #00a2ed); }
+        .btn-free { background: transparent; color: #fff; border: 2px solid var(--accent-blue); }
+
+        /* --- OWNER CARD --- */
+        .dev-card {
+            background: linear-gradient(180deg, var(--card-bg) 0%, #16171d 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 10px;
+            border: 1px solid rgba(0, 229, 255, 0.1);
+        }
+
+        .dev-photo { width: 100px; margin-bottom: 15px; }
+
+        footer { font-size: 0.75rem; color: #444; padding-bottom: 40px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <img src="x.png" alt="App Icon" class="main-photo reveal active">
+        
+        <div class="reveal">
+            <h2 class="desc-title">Apa itu SensiX? </h2>
+            <p class="description">
+                Sensi X merupakan utility tool eksternal yang dirancang khusus untuk mengkalibrasi resolusi layar dan mengoptimalkan responsivitas sentuhan (touch response) pada perangkat.<br><br>
+                Sistem ini bekerja dengan menyempurnakan densitas piksel untuk menciptakan antarmuka yang lebih presisi dan halus (ultra-smooth). Hal ini memungkinkan pengguna melakukan teknik drag shot dengan akurasi tinggi dan upaya minimal. Aplikasi ini beroperasi murni pada pengaturan sistem perangkat tanpa mengintervensi, menyuntikkan, atau memodifikasi integritas file internal game sedikitpun, sehingga aman digunakan sebagai alat penunjang performa.
+            </p>
+        </div>
+
+        <div class="feature-header reveal">
+            <span class="feature-title">Feature</span>
+        </div>
+        
+        <div class="feature-item reveal">
+            <img src="t.jpg" class="feature-img">
+            <h3>Tampilan Panel</h3>
+        </div>
+
+        <div class="feature-item reveal">
+            <img src="s.jpg" class="feature-img">
+            <h3>Sensitivity X Y</h3>
+            <p class="feature-desc">Fitur kalibrasi sensitivitas tingkat tinggi yang memungkinkan pengguna mengatur <i>DPI Custom</i> dan <i>Pointer Speed</i> secara instan. Dirancang untuk menyeimbangkan licinnya layar agar kontrol bidikan tetap stabil Agar Pengguna Bisa Mendapatkan Drag Yang Smooth</p>
+        </div>
+
+        <div class="feature-item reveal">
+            <img src="vpn.jpg" class="feature-img">
+            <h3>Bypass Menu</h3>
+            <p class="feature-desc">Bypass Sebagai Pengaman Yang memastikan Akun Pengguna Aman 100% Dari Deteksi Pihak Ke Tiga,Memastikan Pengguna di jalur yang Aman Sehingga Aman Dari Banned Ataupun BlackList</p>
+        </div>
+
+        <div class="feature-item reveal">
+            
+            <img src="c.jpg" class="feature-img">
+            <h3>Crosshair Dan Boost FPS</h3>
+            <p class="feature-desc">Peningkatan Peforma Perangkat dan Memasuki Mode Game dimana Perangkat Memfukuskan Perofma Pada Game, Sehingga Mengurangi Lag,Frame Drop,Dan Patah Patah. Crosshair Sebagai Overlay alat bantu visual berupa titik tengah (crosshair) custom yang bisa dimodifikasi. Membantu akurasi bidikan saat menggunakan senjata tanpa scope (noscope) agar tetap tepat sasaran di titik tengah layar.</p>
+        </div>
+       
+
+        <div class="pricing-section reveal">
+            <h2 style="color:var(--accent-blue); margin-bottom:10px;">VERSION LIST</h2>
+            
+            <div class="price-card">
+                <div class="version-name free">FREE VERSION</div>
+                <span class="price-label">GRATIS</span>
+                <ul class="feature-list">
+                    <li class="yes">Sensi X Mode</li>
+                    <li class="no">Sensi X Mode V-VIP</li>
+                    <li class="no">Smart DPI</li>
+                    <li class="yes">Change Resolution</li>
+                    <li class="no">Stable Lock</li>
+                    <li class="yes">Bypass</li>
+                    <li class="no">Super Bypass VPN</li>
+                    <li class="yes">ESP Crosshair 1</li>
+                    <li class="no">ESP Crosshair 2</li>
+                    <li class="no">Bebas Iklan/Ads</li>
+                    <li class="no">Permanent</li>
+                </ul>
+            </div>
+
+            <div class="price-card featured">
+                <div class="version-name">VIP VERSION</div>
+                <span class="price-label">Rp30.000</span>
+                <ul class="feature-list">
+                    <li class="yes">Sensi X Mode</li>
+                    <li class="yes">Sensi X Mode V-VIP</li>
+                    <li class="yes">Smart DPI</li>
+                    <li class="yes">Change Resolution</li>
+                    <li class="yes">Stable Lock</li>
+                    <li class="yes">Bypass</li>
+                    <li class="yes">Super Bypass VPN</li>
+                    <li class="yes">ESP Crosshair 1</li>
+                    <li class="yes">ESP Crosshair 2</li>
+                    <li class="yes">Bebas Iklan/Ads</li>
+                    <li class="yes">Permanent</li>
+                    <li class="yes">Free Update</li>
+                </ul>
+            </div>
+
+        <div class="btn-group reveal">
+            <a href="https://wa.me/6288983385195" class="btn btn-blue">
+                <span>🛒</span> Beli VIP via WhatsApp
+            </a>
+            <a href="https://t.me/supermaxx9" class="btn btn-blue">
+                <span>✈️</span> Beli VIP via Telegram
+            </a>
+            <a href="free.html" class="btn btn-free">
+                🎁 Dapatkan Versi Gratis(Trial)
+            </a>
+        </div>
+
+        <div class="dev-card reveal">
+            <img src="gs.png" alt="Dev" class="dev-photo">
+            <h3 class="dev-name">Supermax & Bangkiy</h3>
+            <p class="dev-role">Owner & Developer</p>
+            <p class="dev-text">Pemilik dan pengembang Sensi X</p>
+            <p class="dev-text">YouTube - Bangkiy.7z</p>
+        </div>
+
+        <footer>&copy; 2023 Panel Sensi Dev. All rights reserved.</footer>
+    </div>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>
