@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermax Official - List Panel VIP</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Rajdhani & Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        :root {
+            --bg: #07070d;
+            --accent-purple: #a855f7;
+            --accent-glow: rgba(168, 85, 247, 0.5);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'MyCustomFont', 'Poppins', sans-serif;
+            background-color: var(--bg);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .font-tech {
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .container-main {
+            max-width: 520px;
+            width: 100%;
+            padding: 20px 18px 40px;
+        }
+
+        /* Navbar Style Neon Purple */
+        .navbar-tech {
+            background: rgba(18, 14, 30, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            border-radius: 12px;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+            position: sticky;
+            top: 15px;
+            z-index: 50;
+        }
+
+        .nav-logo {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid var(--accent-purple);
+            box-shadow: 0 0 12px var(--accent-glow);
+            object-fit: cover;
+        }
+
+        /* Card Panel Style Cyberpunk Ungu Menyala */
+        .card-panel {
+            background: linear-gradient(180deg, #131122 0%, #0a0914 100%);
+            border: 1px solid rgba(168, 85, 247, 0.45);
+            border-radius: 16px;
+            padding: 18px;
+            text-align: left;
+            position: relative;
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .card-panel:hover {
+            transform: translateY(-4px);
+            border-color: #c084fc;
+            box-shadow: 0 8px 30px rgba(168, 85, 247, 0.4);
+        }
+
+        .card-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 1px solid rgba(168, 85, 247, 0.5);
+        }
+
+        .btn-tech {
+            background: linear-gradient(90deg, #9333ea, #6b21a8);
+            color: #ffffff;
+            width: 100%;
+            padding: 10px 0;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 0 15px var(--accent-glow);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .card-panel:hover .btn-tech {
+            background: linear-gradient(90deg, #a855f7, #7e22ce);
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
+        }
+
+        .badge-price {
+            background-color: rgba(168, 85, 247, 0.2);
+            border: 1px solid rgba(192, 132, 252, 0.6);
+            color: #e9d5ff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            box-shadow: 0 0 8px rgba(168, 85, 247, 0.3);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.7s all ease;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container-main">
+        
+        <!-- NAVBAR ATAS -->
+        <nav class="navbar-tech reveal active">
+            <div class="flex items-center gap-3">
+                <img src="gs.png" alt="Logo" class="nav-logo">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <h2 class="font-tech text-white font-bold text-sm tracking-widest">SUPERMAX VIP</h2>
+                        <span class="bg-purple-600 text-white text-[8px] font-bold px-1.5 py-0.5 rounded border border-purple-400 shadow-[0_0_8px_rgba(168,85,247,0.6)]">OFFICIAL</span>
+                    </div>
+                    <p class="text-[9px] text-purple-400 font-tech flex items-center gap-1">
+                        <i class="fa-solid fa-circle-check text-[8px]"></i> SUPERMAX DEVELOPER
+                    </p>
+                </div>
+            </div>
+            <div class="text-gray-400 hover:text-purple-400 transition cursor-pointer text-sm">
+                <i class="fa-solid fa-moon"></i>
+            </div>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <div class="text-center mb-10 reveal active">
+            <h1 class="font-tech text-4xl font-extrabold text-white tracking-widest drop-shadow-[0_0_15px_rgba(168,85,247,0.8)] mb-1">SUPERMAX STORE</h1>
+            <h2 class="font-tech text-xl text-purple-400 font-bold tracking-widest mb-3 drop-shadow-[0_0_8px_rgba(168,85,247,0.5)]">OFFICIAL PRICE LIST</h2>
+            
+            <p class="text-xs text-gray-400 px-6 leading-relaxed mb-6">
+                Daftar harga resmi Panel VIP Android. Aman, berkualitas tinggi, anti-banned, dan Pemasangan Gampang, Tinggal Apply.
+            </p>
+
+            <div class="flex flex-col items-center gap-3">
+                <a href="#list-panel" class="bg-purple-600 hover:bg-purple-700 text-white font-tech font-bold tracking-widest px-8 py-3 rounded-xl shadow-[0_0_20px_rgba(168,85,247,0.7)] transition text-sm w-[80%] max-w-[280px]">
+                    LIHAT SEMUA PANEL <i class="fa-solid fa-arrow-down ml-1"></i>
+                </a>
+                <div class="flex items-center gap-2 text-purple-300 border border-purple-900/60 bg-[#11101d] px-5 py-1.5 rounded-lg text-[10px] font-bold shadow-[0_0_10px_rgba(168,85,247,0.2)]">
+                    <i class="fa-solid fa-shield-halved text-purple-400"></i> HARGA RESMI TERBARU
+                </div>
+            </div>
+        </div>
+
+        <!-- JUDUL SECTION LIST PANEL -->
+        <div id="list-panel" class="text-center mb-6 pt-4 reveal">
+            <h2 class="font-tech text-3xl font-bold text-white tracking-widest uppercase drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]">LIST ALL PANEL</h2>
+            <p class="text-[11px] text-gray-400 mt-1 px-4">Pilih paket panel VIP Android. Dapatkan harga promo jangan sampai kehabisan!!</p>
+        </div>
+
+        <!-- LIST PANEL GRID -->
+        <div class="flex flex-col gap-5">
+            
+            <!-- 1. AIM TRACKER (20K) -->
+            <a href="AimTracker/index.html" class="card-panel reveal">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                        <img src="aim.png" alt="Aim Tracker" class="card-icon">
+                        <div>
+                            <h3 class="font-tech text-xl font-bold text-white tracking-wide">AiM TRACKER</h3>
+                            <p class="font-tech text-purple-400 text-xs font-bold tracking-widest">[ VIP PANEL ]</p>
+                        </div>
+                    </div>
+                    <div class="badge-price font-tech">
+                        20K / PERMANEN
+                    </div>
+                </div>
+
+                <div class="border-t border-purple-900/40 pt-3 mb-4">
+                    <p class="text-[11px] font-tech text-gray-400 tracking-wider mb-2 font-bold uppercase"><i class="fa-solid fa-list-check text-purple-400 mr-1"></i> Fitur Panel:</p>
+                    <div class="grid grid-cols-2 gap-x-2 gap-y-1.5 text-xs text-gray-300">
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Easy Drag</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Smart Dpi</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Change Resolution</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Boost FPS</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Crosshair</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Fix Performance Device</div>
+                        <div class="flex items-center gap-1.5 col-span-2"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Direct Login Free Fire</div>
+                    </div>
+                </div>
+
+                <div class="btn-tech">
+                    <i class="fa-solid fa-bolt"></i> Beli Sekarang <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- 2. ITACHI POV (20K) -->
+            <a href="ItachiPOV/index.html" class="card-panel reveal">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                        <img src="i.jpg" alt="ITACHI POV" class="card-icon">
+                        <div>
+                            <h3 class="font-tech text-xl font-bold text-white tracking-wide">ITACHI PoV</h3>
+                            <p class="font-tech text-purple-400 text-xs font-bold tracking-widest">[ VIP PANEL ]</p>
+                        </div>
+                    </div>
+                    <div class="badge-price font-tech">
+                        20K / PERMANEN
+                    </div>
+                </div>
+
+                <div class="border-t border-purple-900/40 pt-3 mb-4">
+                    <p class="text-[11px] font-tech text-gray-400 tracking-wider mb-2 font-bold uppercase"><i class="fa-solid fa-list-check text-purple-400 mr-1"></i> Fitur Panel:</p>
+                    <div class="grid grid-cols-2 gap-x-2 gap-y-1.5 text-xs text-gray-300">
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Easy Drag</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Smart Dpi</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Change Resolution</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Boost FPS</div>
+                        <div class="flex items-center gap-1.5 col-span-2"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Fix Performance Device</div>
+                        <div class="flex items-center gap-1.5 col-span-2"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Direct Login Free Fire</div>
+                    </div>
+                </div>
+
+                <div class="btn-tech">
+                    <i class="fa-solid fa-bolt"></i> Beli Sekarang <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- 3. AURA PANEL INJECTOR (25K) -->
+            <a href="AuraPanelInjector/index.html" class="card-panel reveal">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                        <img src="a.png" alt="Aura Panel" class="card-icon">
+                        <div>
+                            <h3 class="font-tech text-xl font-bold text-white tracking-wide">AURA INJECTOR</h3>
+                            <p class="font-tech text-purple-400 text-xs font-bold tracking-widest">[ INJECTOR ]</p>
+                        </div>
+                    </div>
+                    <div class="badge-price font-tech">
+                        25K / PERMANEN
+                    </div>
+                </div>
+
+                <div class="border-t border-purple-900/40 pt-3 mb-4">
+                    <p class="text-[11px] font-tech text-gray-400 tracking-wider mb-2 font-bold uppercase"><i class="fa-solid fa-list-check text-purple-400 mr-1"></i> Fitur Panel:</p>
+                    <div class="grid grid-cols-2 gap-x-2 gap-y-1.5 text-xs text-gray-300">
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Easy Drag</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Smart Dpi</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Change Resolution</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Boost FPS</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Crosshair</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Fix Performance Device</div>
+                        <div class="flex items-center gap-1.5 col-span-2 text-purple-300 font-semibold"><i class="fa-solid fa-gamepad text-purple-400 text-[10px]"></i> [Injector] Bisa On Off Fitur In Game</div>
+                        <div class="flex items-center gap-1.5 col-span-2"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Direct Login Free Fire</div>
+                    </div>
+                </div>
+
+                <div class="btn-tech">
+                    <i class="fa-solid fa-bolt"></i> Beli Sekarang <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- 4. SENSI X (30K) -->
+            <a href="SensiX/index.html" class="card-panel reveal">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                        <img src="x.jpg" alt="Sensix" class="card-icon">
+                        <div>
+                            <h3 class="font-tech text-xl font-bold text-white tracking-wide">SENSI X</h3>
+                            <p class="font-tech text-purple-400 text-xs font-bold tracking-widest">[ VIP PANEL ]</p>
+                        </div>
+                    </div>
+                    <div class="badge-price font-tech">
+                        30K / PERMANEN
+                    </div>
+                </div>
+
+                <div class="border-t border-purple-900/40 pt-3 mb-4">
+                    <p class="text-[11px] font-tech text-gray-400 tracking-wider mb-2 font-bold uppercase"><i class="fa-solid fa-list-check text-purple-400 mr-1"></i> Fitur Panel:</p>
+                    <div class="grid grid-cols-2 gap-x-2 gap-y-1.5 text-xs text-gray-300">
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Easy Drag</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Smart Dpi</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Change Resolution</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Boost FPS</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Crosshair</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Fix Performance Device</div>
+                        <div class="flex items-center gap-1.5 col-span-2"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Direct Login Free Fire</div>
+                    </div>
+                </div>
+
+                <div class="btn-tech">
+                    <i class="fa-solid fa-bolt"></i> Beli Sekarang <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- 5. STAR SENSI (35K) - [BEST SELLER BADGE] -->
+            <a href="StarSensi/index.html" class="card-panel reveal">
+                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white text-[10px] font-bold px-3 py-0.5 rounded-full border border-purple-300 shadow-[0_0_12px_rgba(168,85,247,0.9)] z-10">
+                    <i class="fa-solid fa-crown"></i> BEST SELLER
+                </div>
+                <div class="flex items-center justify-between mb-3 mt-1">
+                    <div class="flex items-center gap-3">
+                        <img src="s.jpg" alt="Star Sensi" class="card-icon">
+                        <div>
+                            <h3 class="font-tech text-xl font-bold text-white tracking-wide">STAR SENSI</h3>
+                            <p class="font-tech text-purple-400 text-xs font-bold tracking-widest">[ VIP PANEL ]</p>
+                        </div>
+                    </div>
+                    <div class="badge-price font-tech">
+                        35K / PERMANEN
+                    </div>
+                </div>
+
+                <div class="border-t border-purple-900/40 pt-3 mb-4">
+                    <p class="text-[11px] font-tech text-gray-400 tracking-wider mb-2 font-bold uppercase"><i class="fa-solid fa-list-check text-purple-400 mr-1"></i> Fitur Panel:</p>
+                    <div class="grid grid-cols-2 gap-x-2 gap-y-1.5 text-xs text-gray-300">
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Easy Drag</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Smart Dpi</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Change Resolution</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Boost FPS</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Crosshair</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Fix Performance Device</div>
+                        <div class="flex items-center gap-1.5 col-span-2"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Direct Login Free Fire</div>
+                    </div>
+                </div>
+
+                <div class="btn-tech">
+                    <i class="fa-solid fa-bolt"></i> Beli Sekarang <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- 6. KING SENSI (35K) -->
+            <a href="KingSensi/index.html" class="card-panel reveal">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                        <img src="king.jpg" alt="KiNG SENSi" class="card-icon">
+                        <div>
+                            <h3 class="font-tech text-xl font-bold text-white tracking-wide">KiNG SENSi</h3>
+                            <p class="font-tech text-purple-400 text-xs font-bold tracking-widest">[ VIP PANEL ]</p>
+                        </div>
+                    </div>
+                    <div class="badge-price font-tech">
+                        35K / PERMANEN
+                    </div>
+                </div>
+
+                <div class="border-t border-purple-900/40 pt-3 mb-4">
+                    <p class="text-[11px] font-tech text-gray-400 tracking-wider mb-2 font-bold uppercase"><i class="fa-solid fa-list-check text-purple-400 mr-1"></i> Fitur Panel:</p>
+                    <div class="grid grid-cols-2 gap-x-2 gap-y-1.5 text-xs text-gray-300">
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Easy Drag</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Smart Dpi</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Change Resolution</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Boost FPS</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Crosshair</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Fix Performance Device</div>
+                        <div class="flex items-center gap-1.5 col-span-2 text-purple-300 font-semibold"><i class="fa-solid fa-fire text-purple-400 text-[10px]"></i> Rog Monitoring</div>
+                        <div class="flex items-center gap-1.5 col-span-2"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Direct Login Free Fire</div>
+                    </div>
+                </div>
+
+                <div class="btn-tech">
+                    <i class="fa-solid fa-bolt"></i> Beli Sekarang <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- 7. GOOD SENSI STANDAR (25K) -->
+            <a href="goodsensi/index.html" class="card-panel reveal">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                        <img src="gst.jpg" alt="Good Sensi Standar" class="card-icon">
+                        <div>
+                            <h3 class="font-tech text-xl font-bold text-white tracking-wide">GOOD SENSI STANDAR</h3>
+                            <p class="font-tech text-purple-400 text-xs font-bold tracking-widest">[ VIP PANEL ]</p>
+                        </div>
+                    </div>
+                    <div class="badge-price font-tech">
+                        25K / PERMANEN
+                    </div>
+                </div>
+
+                <div class="border-t border-purple-900/40 pt-3 mb-4">
+                    <p class="text-[11px] font-tech text-gray-400 tracking-wider mb-2 font-bold uppercase"><i class="fa-solid fa-list-check text-purple-400 mr-1"></i> Fitur Panel:</p>
+                    <div class="grid grid-cols-2 gap-x-2 gap-y-1.5 text-xs text-gray-300">
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Easy Drag</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Smart Dpi</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Change Resolution</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Boost FPS</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Crosshair</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Fix Performance Device</div>
+                        <div class="flex items-center gap-1.5 col-span-2"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Direct Login Free Fire</div>
+                    </div>
+                </div>
+
+                <div class="btn-tech">
+                    <i class="fa-solid fa-bolt"></i> Beli Sekarang <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- 8. GOOD SENSI PRO (60K) -->
+            <a href="goodsensi/index.html" class="card-panel reveal">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                        <img src="gsp.jpg" alt="Good Sensi Pro" class="card-icon">
+                        <div>
+                            <h3 class="font-tech text-xl font-bold text-white tracking-wide">GOOD SENSI PRO</h3>
+                            <p class="font-tech text-purple-400 text-xs font-bold tracking-widest">[ VIP PANEL ]</p>
+                        </div>
+                    </div>
+                    <div class="badge-price font-tech">
+                        60K / PERMANEN
+                    </div>
+                </div>
+
+                <div class="border-t border-purple-900/40 pt-3 mb-4">
+                    <p class="text-[11px] font-tech text-gray-400 tracking-wider mb-2 font-bold uppercase"><i class="fa-solid fa-list-check text-purple-400 mr-1"></i> Fitur Panel:</p>
+                    <div class="grid grid-cols-2 gap-x-2 gap-y-1.5 text-xs text-gray-300">
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Easy Drag</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Smart Dpi</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Change Resolution</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Boost FPS</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Crosshair</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Fix Performance Device</div>
+                        <div class="flex items-center gap-1.5 col-span-2 text-purple-300 font-semibold"><i class="fa-solid fa-fire text-purple-400 text-[10px]"></i> Rog Monitoring</div>
+                        <div class="flex items-center gap-1.5 col-span-2"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Direct Login Free Fire</div>
+                    </div>
+                </div>
+
+                <div class="btn-tech">
+                    <i class="fa-solid fa-bolt"></i> Beli Sekarang <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- 9. GOOD SENSI ULTRA (90K) -->
+            <a href="goodsensi/index.html" class="card-panel reveal">
+                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white text-[10px] font-bold px-3 py-0.5 rounded-full border border-purple-300 shadow-[0_0_12px_rgba(168,85,247,0.9)] z-10">
+                    <i class="fa-solid fa-crown"></i> ULTIMATE CHOICE
+                </div>
+                <div class="flex items-center justify-between mb-3 mt-1">
+                    <div class="flex items-center gap-3">
+                        <img src="gu.jpg" alt="Good Sensi Ultra" class="card-icon">
+                        <div>
+                            <h3 class="font-tech text-xl font-bold text-white tracking-wide">GOOD SENSI ULTRA</h3>
+                            <p class="font-tech text-purple-400 text-xs font-bold tracking-widest">[ VIP PANEL ]</p>
+                        </div>
+                    </div>
+                    <div class="badge-price font-tech">
+                        90K / PERMANEN
+                    </div>
+                </div>
+
+                <div class="border-t border-purple-900/40 pt-3 mb-4">
+                    <p class="text-[11px] font-tech text-gray-400 tracking-wider mb-2 font-bold uppercase"><i class="fa-solid fa-list-check text-purple-400 mr-1"></i> Fitur Panel:</p>
+                    <div class="grid grid-cols-2 gap-x-2 gap-y-1.5 text-xs text-gray-300">
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Easy Drag</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Smart Dpi</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Change Resolution</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Boost FPS</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Crosshair</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Fix Performance Device</div>
+                        <div class="flex items-center gap-1.5 col-span-2 text-purple-300 font-semibold"><i class="fa-solid fa-fire text-purple-400 text-[10px]"></i> Rog Monitoring</div>
+                        <div class="flex items-center gap-1.5 col-span-2"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Direct Login Free Fire</div>
+                    </div>
+                </div>
+
+                <div class="btn-tech">
+                    <i class="fa-solid fa-bolt"></i> Beli Sekarang <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- GARIS PEMISAH SOCIAL MEDIA -->
+            <div class="reveal mt-8 mb-2 flex items-center justify-center gap-3">
+                <div class="h-px bg-purple-900/50 flex-1"></div>
+                <span class="text-xs font-tech text-purple-400 tracking-widest drop-shadow-[0_0_5px_rgba(168,85,247,0.5)]">SOCIAL & INFO</span>
+                <div class="h-px bg-purple-900/50 flex-1"></div>
+            </div>
+
+            <!-- Kontak WA Admin -->
+            <a href="https://wa.me/6283143774379" target="_blank" class="card-panel reveal !border-gray-800 hover:!border-green-500">
+                <div class="flex items-center gap-4">
+                    <img src="gs.png" alt="WhatsApp Admin" class="card-icon rounded-full border-green-500">
+                    <div>
+                        <h3 class="font-tech text-lg font-bold text-white tracking-wide">WhatsApp Admin</h3>
+                        <p class="text-green-400 text-xs mt-1"><i class="fa-brands fa-whatsapp"></i> +62 831-4377-4379</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Saluran WhatsApp Utama -->
+            <a href="https://whatsapp.com/channel/0029VbBT2XgEawdrfg4fjq01" target="_blank" class="card-panel reveal !border-gray-800 hover:!border-purple-500">
+                <div class="flex items-center gap-4">
+                    <img src="gs.png" alt="SALURAN UTAMA" class="card-icon rounded-full">
+                    <div>
+                        <h3 class="font-tech text-lg font-bold text-white tracking-wide">Saluran Utama</h3>
+                        <p class="text-gray-400 text-xs mt-1">Info Update & Panel</p>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Saluran WhatsApp Testi -->
+            <a href="https://whatsapp.com/channel/0029Vb7P1qIJP21COkLmPl38" target="_blank" class="card-panel reveal !border-gray-800 hover:!border-purple-500">
+                <div class="flex items-center gap-4">
+                    <img src="gs.png" alt="SALURAN TESTI" class="card-icon rounded-full">
+                    <div>
+                        <h3 class="font-tech text-lg font-bold text-white tracking-wide">Saluran Testimoni</h3>
+                        <p class="text-gray-400 text-xs mt-1">Bukti Transaksi</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Jual Beli Akun -->
+            <a href="https://whatsapp.com/channel/0029VbCsWDxFy72G0axduQ1O" target="_blank" class="card-panel reveal !border-gray-800 hover:!border-purple-500">
+                <div class="flex items-center gap-4">
+                    <img src="gs.png" alt="Jual Beli Akun" class="card-icon rounded-full">
+                    <div>
+                        <h3 class="font-tech text-lg font-bold text-white tracking-wide">Jual Beli Akun</h3>
+                        <p class="text-gray-400 text-xs mt-1">Grup Jual Beli Aman</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- YouTube Baru -->
+            <a href="https://www.youtube.com/@Supermax7z" target="_blank" class="card-panel reveal !border-gray-800 hover:!border-purple-500">
+                <div class="flex items-center gap-4">
+                    <img src="yt.png" alt="YOUTUBE" class="card-icon border-purple-500 bg-white">
+                    <div>
+                        <h3 class="font-tech text-lg font-bold text-white tracking-wide">YouTube</h3>
+                        <p class="text-purple-400 text-xs mt-1"><i class="fa-brands fa-youtube"></i> @supermax7z</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <footer class="mt-12 border-t border-purple-900/40 pt-6 text-center">
+            <h3 class="font-tech text-xl font-bold tracking-widest text-white mb-1 drop-shadow-[0_0_8px_rgba(168,85,247,0.5)]">SUPERMAX DEV</h3>
+            <p class="text-[10px] text-gray-500">© 2026 Supermax Developer. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Script Animasi Scroll -->
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 50) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>

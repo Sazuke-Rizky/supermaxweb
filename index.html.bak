@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermax Official - List Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* MENGHUBUNGKAN FONT BARU KAMU */
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        :root {
+            --bg: #0f1014;
+            --card-bg: #1e1f26;
+            --accent: #00e5ff;
+            --text: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            /* MENGGUNAKAN FONT BARU */
+            font-family: 'MyCustomFont', 'Poppins', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .logo-main {
+            width: 120px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px var(--accent));
+        }
+
+        h1 { 
+            font-weight: 800; 
+            font-size: 1.8rem; 
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        p.subtitle { 
+            color: #bdc3c7; 
+            font-size: 0.9rem; 
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+
+        .menu-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .menu-item {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 20px rgba(0, 229, 255, 0.1);
+        }
+
+        .menu-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .menu-info h3 { 
+            font-size: 1.1rem; 
+            margin-bottom: 4px; 
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .menu-info p { font-size: 0.8rem; color: #ccc; }
+
+        /* DESAIN TOMBOL KLIK DETAIL */
+        .btn-detail {
+            background: linear-gradient(45deg, #00e5ff, #008cff);
+            color: #0f1014;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-top: 8px;
+            display: inline-block;
+            box-shadow: 0 2px 10px rgba(0, 229, 255, 0.3);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* Animasi */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.8s all ease;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        footer { margin-top: 50px; color: #444; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="gs.png" alt="Supermax Logo" class="logo-main reveal active">
+        
+        <div class="reveal active">
+            <h1>SUPERMAX - BANGKIY</h1>
+            <p class="subtitle">Panel Sensi Developer</p>
+            
+            <p class="subtitle">Beli Panel? Pilih Panel Di Bawah Sini Yaa⏬</p>
+        </div>
+
+        <div class="menu-grid">
+            
+            <a href="goodsensi/index.html" class="menu-item reveal">
+                <img src="gu.jpg" alt="Good Sensi" class="menu-icon">
+                <div class="menu-info">
+                    <h3>Good Sensi</h3>
+                    <div class="btn-detail">Lihat Harga & Fitur ➔</div>
+                </div>
+            </a>
+
+            <a href="SensiX/index.html" class="menu-item reveal">
+                <img src="x.jpg" alt="Sensix" class="menu-icon">
+                <div class="menu-info">
+                    <h3>Sensi X</h3>
+                    <div class="btn-detail">Lihat Harga & Fitur ➔</div>
+                </div>
+            </a>
+
+            <a href="StarSensi/index.html" class="menu-item reveal">
+                <img src="s.jpg" alt="Star Sensi" class="menu-icon">
+                <div class="menu-info">
+                    <h3>Star Sensi</h3>
+                    <div class="btn-detail">Lihat Harga & Fitur ➔</div>
+                </div>
+            </a>
+
+            <a href="AuraPanelInjector/index.html" class="menu-item reveal">
+                <img src="a.png" alt="Aura Panel" class="menu-icon">
+                <div class="menu-info">
+                    <h3>Aura Panel Injector</h3>
+                    <div class="btn-detail">Lihat Harga & Fitur ➔</div>
+                </div>
+            </a>
+            
+            <a href="KingSensi/index.html" class="menu-item reveal">
+                <img src="king.jpg" alt="KiNG SENSi" class="menu-icon">
+                <div class="menu-info">
+                    <h3>KiNG SENSi</h3>
+                    <div class="btn-detail">Lihat Harga & Fitur ➔</div>
+                </div>
+            </a>
+
+            <a href="AimTracker/index.html" class="menu-item reveal">
+                <img src="aim.png" alt="Aim Tracker" class="menu-icon">
+                <div class="menu-info">
+                    <h3>AiM TRACKER</h3>
+                    <div class="btn-detail">Lihat Harga & Fitur ➔</div>
+                </div>
+            </a>
+
+            <a href="ItachiPOV/index.html" class="menu-item reveal">
+                <img src="i.jpg" alt="ITACHI POV" class="menu-icon">
+                <div class="menu-info">
+                    <h3>Itachi PoV</h3>
+                    <div class="btn-detail">Lihat Harga & Fitur ➔</div>
+                </div>
+            </a>
+            
+            <a href="https://whatsapp.com/channel/0029VbBT2XgEawdrfg4fjq01" class="menu-item reveal">
+                <img src="gs.png" alt="SALURAN UTAMA" class="menu-icon">
+                <div class="menu-info">
+                    <h3>Saluran Utama</h3>
+                </div>
+            </a>
+            
+            <a href="https://whatsapp.com/channel/0029Vb7P1qIJP21COkLmPl38" class="menu-item reveal">
+                <img src="gs.png" alt="SALURAN TESTI" class="menu-icon">
+                <div class="menu-info">
+                    <h3>Saluran Testi</h3>
+                </div>
+            </a>
+            
+            <a href="http://youtube.com/@bangkiy.7z" class="menu-item reveal">
+                <img src="yt.png" alt="YOUTUBE" class="menu-icon">
+                <div class="menu-info">
+                    <h3>YouTube</h3>
+                </div>
+            </a>
+        </div>
+
+        <footer>
+            &copy; 2026 Supermax Developer.
+        </footer>
+    </div>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 50) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>
